@@ -1,4 +1,4 @@
 # Default ignored files
-.gradle
-.idea
+.gradle/**
+.idea/**
 build
