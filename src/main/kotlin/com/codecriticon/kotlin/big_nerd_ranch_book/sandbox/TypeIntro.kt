@@ -1,4 +1,4 @@
-package com.codecriticon.kotlin.big_nerd_ranch_book
+package com.codecriticon.kotlin.big_nerd_ranch_book.sandbox
 
 const val MAX_EXPERIENCE: Int = 5000
 
