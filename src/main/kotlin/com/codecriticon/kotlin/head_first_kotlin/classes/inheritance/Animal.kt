@@ -1,20 +1,16 @@
 package com.codecriticon.kotlin.head_first_kotlin.classes.inheritance
 
-open class Animal(
-    open val image: String = "",
-    open val food: String = "",
-    open val habitat: String = "",
+abstract class Animal : Roamable {
+    abstract val image: String
+    abstract val food: String
+    abstract val habitat: String
     val hunger: Int = 10
-) {
-    open fun makeNoise() {
-        println("The Animal is making a noise")
-    }
 
-    open fun eat() {
-        println("The Animal is eating")
-    }
+    abstract fun makeNoise()
 
-    open fun roam() {
+    abstract fun eat()
+
+    override fun roam() {
         println("The Animal is roaming")
     }
 

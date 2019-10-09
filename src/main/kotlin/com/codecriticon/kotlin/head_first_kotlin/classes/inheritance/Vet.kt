@@ -5,7 +5,6 @@ class Vet {
     fun giveShot(animal: Animal) {
         animal.makeNoise()
     }
-
 }
 
 fun main() {
@@ -19,6 +18,13 @@ fun main() {
     val vet = Vet()
     for (animal in animals) {
         vet.giveShot(animal)
+    }
+
+    for (animal in animals) {
+        animal.roam()
+        if (animal is Animal) {
+            animal.eat()
+        }
     }
 
 }
