@@ -1,4 +1,4 @@
-package com.codecriticon.kotlin.big_nerd_ranch_book.nyethack
+package com.codecriticon.kotlin.big_nerd_ranch_book.nyethack.model
 
 fun main() {
     var swordsJuggling: Int? = null

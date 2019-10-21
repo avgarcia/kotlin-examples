@@ -1,4 +1,4 @@
-package com.codecriticon.kotlin.big_nerd_ranch_book.nyethack
+package com.codecriticon.kotlin.big_nerd_ranch_book.nyethack.model
 
 import java.io.File
 
@@ -35,7 +35,10 @@ fun main() {
 
     var orderCount = 0
     while (orderCount <= 9) {
-        placeOrder(uniquePatrons.random(), menuList.random())
+        placeOrder(
+            uniquePatrons.random(),
+            menuList.random()
+        )
         orderCount++
     }
 
