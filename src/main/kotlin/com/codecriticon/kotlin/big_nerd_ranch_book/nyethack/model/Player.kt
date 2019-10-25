@@ -10,6 +10,8 @@ class Player(
 ) {
     val homeTown  by lazy { selectHometown() }
 
+    var currentPosition = Coordinate(0, 0)
+
     val name = _name
         get() = "${field.capitalize()} of $homeTown"
 
