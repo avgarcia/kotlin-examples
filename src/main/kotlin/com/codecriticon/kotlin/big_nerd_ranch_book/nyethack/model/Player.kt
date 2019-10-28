@@ -4,10 +4,14 @@ import java.io.File
 
 class Player(
     _name: String,
-    var healthPoints: Int = 100,
+    override var healthPoints: Int = 100,
     val isBlessed: Boolean,
     private val isInmortal: Boolean
-) {
+) : Fightable {
+
+    override val diceCount: Int = 3
+    override val diceSides: Int = 6
+
     val homeTown  by lazy { selectHometown() }
 
     var currentPosition = Coordinate(0, 0)
@@ -23,6 +27,17 @@ class Player(
     init {
         require(healthPoints > 0) { "healthPoints must be greater than zero." }
         require(name.isNotBlank()) { "Player must have a name." }
+    }
+
+    override fun attack(oponent: Fightable): Int {
+        val damageDealt = if (isBlessed) {
+            damageRoll * 2
+        } else {
+            damageRoll
+        }
+
+        oponent.healthPoints-= damageDealt
+        return damageDealt
     }
 
     fun castFireball(numFireballs: Int = 2) =
