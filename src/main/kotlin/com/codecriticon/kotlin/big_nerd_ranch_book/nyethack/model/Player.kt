@@ -1,5 +1,6 @@
 package com.codecriticon.kotlin.big_nerd_ranch_book.nyethack.model
 
+import com.codecriticon.kotlin.big_nerd_ranch_book.nyethack.extensions.random as randomizer
 import java.io.File
 
 class Player(
@@ -64,7 +65,6 @@ class Player(
     private fun selectHometown() = File("data/towns.txt")
         .readText()
         .split("\n")
-        .shuffled()
-        .first()
+        .randomizer()
 
 }
